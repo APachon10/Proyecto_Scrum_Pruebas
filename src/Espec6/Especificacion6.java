@@ -15,92 +15,53 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+import javax.swing.JDesktopPane;
+import java.awt.Color;
 
 public class Especificacion6 extends JFrame {
 
 	private JPanel contentPane;
 	public Especificacion6() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 684, 460);
+		setBounds(100, 100, 788, 529);
 		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
-		
-		JMenuItem Proyectos_Bar = new JMenuItem("Proyectos");
-		menuBar.add(Proyectos_Bar);
-		
-		JMenuItem Users_Bar = new JMenuItem("Users");
-		menuBar.add(Users_Bar);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		
-		JInternalFrame internalFrame = new JInternalFrame("Login");
-		internalFrame.setMaximizable(true);
-		internalFrame.setClosable(true);
-		internalFrame.setVisible(true);
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(130)
-					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(171, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(125, Short.MAX_VALUE)
-					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 181, GroupLayout.PREFERRED_SIZE)
-					.addGap(82))
-		);
-		
-		JLabel label_User = new JLabel("Usuario");
-		
-		JLabel lblPassword = new JLabel("Password");
-		
-		JTextArea textArea = new JTextArea();
-		
-		JTextArea textArea_1 = new JTextArea();
-		
-		JButton btnConectar = new JButton("Conectar");
-		GroupLayout groupLayout = new GroupLayout(internalFrame.getContentPane());
+		JDesktopPane Panel = new JDesktopPane();
+		Panel.setForeground(Color.LIGHT_GRAY);
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
+			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(123)
-					.addComponent(btnConectar)
-					.addContainerGap(129, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(77)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(lblPassword)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(textArea_1))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(label_User)
-							.addGap(18)
-							.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 148, GroupLayout.PREFERRED_SIZE)))
-					.addGap(62))
+					.addContainerGap()
+					.addComponent(Panel, GroupLayout.DEFAULT_SIZE, 752, Short.MAX_VALUE)
+					.addContainerGap())
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(41)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(label_User)
-						.addComponent(textArea, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(26)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblPassword)
-						.addComponent(textArea_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-					.addComponent(btnConectar)
-					.addGap(20))
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(Panel, GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+					.addContainerGap())
 		);
-		internalFrame.getContentPane().setLayout(groupLayout);
-		contentPane.setLayout(gl_contentPane);
+		
+		JButton btnNewButton = new JButton("New button");
+		GroupLayout gl_Panel = new GroupLayout(Panel);
+		gl_Panel.setHorizontalGroup(
+			gl_Panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_Panel.createSequentialGroup()
+					.addGap(184)
+					.addComponent(btnNewButton)
+					.addContainerGap(479, Short.MAX_VALUE))
+		);
+		gl_Panel.setVerticalGroup(
+			gl_Panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, gl_Panel.createSequentialGroup()
+					.addContainerGap(362, Short.MAX_VALUE)
+					.addComponent(btnNewButton)
+					.addGap(84))
+		);
+		Panel.setLayout(gl_Panel);
+		getContentPane().setLayout(groupLayout);
+		
 		this.setVisible(true);
 	}
 	public static void main(String[] args) {
