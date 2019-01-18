@@ -17,6 +17,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import java.awt.Color;
+import javax.swing.JMenu;
 
 public class Especificacion6 extends JFrame {
 
@@ -30,7 +31,7 @@ public class Especificacion6 extends JFrame {
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
+				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(Panel, GroupLayout.DEFAULT_SIZE, 752, Short.MAX_VALUE)
 					.addContainerGap())
@@ -39,28 +40,38 @@ public class Especificacion6 extends JFrame {
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(Panel, GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+					.addComponent(Panel, GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
 					.addContainerGap())
 		);
 		
-		JButton btnNewButton = new JButton("New button");
+		JInternalFrame internalFrame = new JInternalFrame("New JInternalFrame");
+		internalFrame.setVisible(true);
 		GroupLayout gl_Panel = new GroupLayout(Panel);
 		gl_Panel.setHorizontalGroup(
 			gl_Panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_Panel.createSequentialGroup()
-					.addGap(184)
-					.addComponent(btnNewButton)
-					.addContainerGap(479, Short.MAX_VALUE))
+					.addGap(164)
+					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 422, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(166, Short.MAX_VALUE))
 		);
 		gl_Panel.setVerticalGroup(
 			gl_Panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_Panel.createSequentialGroup()
-					.addContainerGap(362, Short.MAX_VALUE)
-					.addComponent(btnNewButton)
-					.addGap(84))
+				.addGroup(gl_Panel.createSequentialGroup()
+					.addGap(146)
+					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(158, Short.MAX_VALUE))
 		);
 		Panel.setLayout(gl_Panel);
 		getContentPane().setLayout(groupLayout);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenuItem Proyectos_Bar = new JMenuItem("Proyectos");
+		menuBar.add(Proyectos_Bar);
+		
+		JMenuItem USer_Bar = new JMenuItem("Users");
+		menuBar.add(USer_Bar);
 		
 		this.setVisible(true);
 	}
