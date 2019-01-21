@@ -196,7 +196,6 @@ public class GestorDeProyectos extends JFrame {
 
 		txtLogin = new JTextField();
 		txtLogin.setColumns(10);
-
 		txtPassword = new JTextField();
 		txtPassword.setColumns(10);
 

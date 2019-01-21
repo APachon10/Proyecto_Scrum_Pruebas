@@ -55,16 +55,16 @@ public class Especificacion6 extends JFrame {
 		gl_Panel.setHorizontalGroup(
 			gl_Panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_Panel.createSequentialGroup()
-					.addGap(225)
-					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 266, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(261, Short.MAX_VALUE))
+					.addGap(173)
+					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 271, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(308, Short.MAX_VALUE))
 		);
 		gl_Panel.setVerticalGroup(
 			gl_Panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_Panel.createSequentialGroup()
-					.addContainerGap(142, Short.MAX_VALUE)
-					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)
-					.addGap(138))
+				.addGroup(gl_Panel.createSequentialGroup()
+					.addGap(77)
+					.addComponent(internalFrame, GroupLayout.PREFERRED_SIZE, 190, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(181, Short.MAX_VALUE))
 		);
 		
 		JLabel lblLogin = new JLabel("Login");
@@ -78,6 +78,8 @@ public class Especificacion6 extends JFrame {
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
+		
+		JLabel lblEstado = new JLabel("Estado:");
 		GroupLayout groupLayout_1 = new GroupLayout(internalFrame.getContentPane());
 		groupLayout_1.setHorizontalGroup(
 			groupLayout_1.createParallelGroup(Alignment.LEADING)
@@ -97,13 +99,18 @@ public class Especificacion6 extends JFrame {
 									.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
 						.addGroup(groupLayout_1.createSequentialGroup()
 							.addGap(89)
-							.addComponent(btnEnviar)))
-					.addContainerGap(212, Short.MAX_VALUE))
+							.addComponent(btnEnviar))
+						.addGroup(groupLayout_1.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblEstado)))
+					.addContainerGap(53, Short.MAX_VALUE))
 		);
 		groupLayout_1.setVerticalGroup(
 			groupLayout_1.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout_1.createSequentialGroup()
-					.addGap(35)
+					.addContainerGap()
+					.addComponent(lblEstado)
+					.addGap(10)
 					.addGroup(groupLayout_1.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblLogin)
 						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -122,13 +129,16 @@ public class Especificacion6 extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenuItem Proyectos_Bar = new JMenuItem("Proyectos");
-		menuBar.add(Proyectos_Bar);
+		JMenu Proyectos_Menu = new JMenu("Proyectos");
+		menuBar.add(Proyectos_Menu);
 		
-		JMenuItem USer_Bar = new JMenuItem("Users");
-		menuBar.add(USer_Bar);
+		JMenuItem mntmNuevoProyecto = new JMenuItem("Nuevo Proyecto");
+		Proyectos_Menu.add(mntmNuevoProyecto);
 		
 		this.setVisible(true);
+	}
+	public void comprobarConexion() {
+		
 	}
 	public static void main(String[] args) {
 		new Especificacion6();
