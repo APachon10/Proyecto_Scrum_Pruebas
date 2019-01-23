@@ -13,9 +13,6 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 
-
-
-
 public class ComprobarConexion extends JFrame {
 
 	private JPanel contentPane;
